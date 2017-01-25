@@ -1,0 +1,229 @@
+.menubar{
+    height:70px;
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: Helvetica,Arial,sans-serif;
+    background-color: #019683;
+    line-height: 70px;
+    z-index: 99;
+}
+
+.menubar > .logo, .programa{
+    position: relative;
+    float:left;
+    font-size: 24pt;
+    color: #FFF;
+    padding: 0 20px;
+    transition: all 0.4s ease;
+}
+
+.logo > .glyphicon{
+    font-size: 20pt;
+    margin-right: 10px;
+}
+
+.menubar > .logo:hover{
+    background-color: #017D6D;
+}
+
+.menubar > .pesquisa{
+    position: relative;
+    float: left;
+    height:50%;
+    line-height: 20px;
+    margin-left: 50px;
+    margin-top: 18px;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    opacity:0;
+}
+
+.pesquisa > input,.pesquisa > button{
+    float:left;
+    height:100%;
+    width: 4em;
+    box-sizing: border-box;
+    border: none;
+    color: #FFF;
+}
+
+.pesquisa > input{
+    background-color: #017D6D;
+    font-size: 18pt;
+    padding:10px;
+}
+
+.pesquisa > input:hover{
+    border: 1px solid #269DF0;
+}
+
+.pesquisa > button{
+    font-size: 16pt;
+    background-color: #56A89F;
+    transition: all 0.4s ease;
+}
+
+.pesquisa > button:hover{
+    background-color: #F08741;
+}
+
+.menubar > .programa{
+    position:absolute;
+    right:0;
+    font-size: 16pt;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    opacity:0;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height:100%;
+    margin-top:70px;
+    background-color: #E6E6E6;
+    overflow: auto;
+    z-index: 98;
+}
+
+.menu > input,.menu > button{
+    height:55px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.menu > input{
+    width: 75%;
+    background-color: #FFF;
+    color: #000;
+    padding:10px;
+    font-size: 18pt;
+    transition: all 0.4s ease;
+}
+
+.menu > button{
+    width: 25%;
+    float:right;
+    background-color: #888;
+    color: #FFF;
+    font-size: 18pt;
+    transition: all 0.4s ease;
+}
+
+.menu > input:hover{
+    border: 1px solid #269DF0;
+}
+
+.menu > button:hover{
+    background-color: #CCC;
+    color:#666;
+}
+
+.menu-group > .nivel-1,
+.menu-group > .nivel-2,
+.menu-group > .nivel-3{
+    line-height: 40px;
+    color: #666;
+    font-size: 16pt;
+    transition: all 0.4s ease;
+}
+.menu-group > .nivel-1{
+    padding: 10px 15px;
+}
+
+.menu-group > .nivel-1::after,
+.menu-group > .nivel-2::after,
+.menu-group > .nivel-3::after{
+    content:'';
+    height:1px;
+    width: 85%;
+    position: absolute;
+    display: block;
+    background-color: #666;
+    border-bottom:2px solid #666;
+}
+
+.menu-group:hover > .nivel-1::after,
+.menu-group:hover > .nivel-2::after,
+.menu-group:hover > .nivel-3::after{
+    background-color: #FFF;
+    border-bottom:2px solid #FFF;
+}
+
+.menu-group:hover > .nivel-1,
+.menu-group:hover > .nivel-2,
+.menu-group:hover > .nivel-3{
+    background-color: #666;
+    color: #FFF;
+    padding-left: 30px;
+    transition: all 0.4s ease;
+}
+
+.menu-group:hover .nivel-1 + .nivel-2{
+    height:50px;
+    width: 100%;
+    color: #666;
+    background-color: #E6E6E6;
+    padding: 10px 15px;
+    padding-left: 40px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-group:hover .nivel-2:hover{
+    color: #FFF;
+    background-color: #666;
+}
+
+.menu-group:hover .nivel-2:hover + .nivel-3{
+    height:50px;
+    width: 100%;
+    color: #666;
+    background-color: #E6E6E6;
+    padding: 10px 15px;
+    padding-left: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-group > .nivel-1 .glyphicon,
+.menu-group > .nivel-2 .glyphicon,
+.menu-group > .nivel-3 .glyphicon{
+    margin-right: 10px;
+}
+
+.nivel-2,.nivel-3{
+    visibility: hidden;
+    opacity: 0;
+    height:0;
+    width: 0;
+    margin: 0;
+    padding:0;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity:0.7;
+    z-index: 97;
+}
+
+@media only screen and (min-width: 580px) {
+    .menubar > .pesquisa{
+        visibility: visible;
+        opacity:1;
+    }
+    
+    .menubar > .programa{
+        visibility: visible;
+        opacity:1;
+    }
+}
