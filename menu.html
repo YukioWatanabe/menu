@@ -2,78 +2,382 @@
     <head>
         <title>SOC - Main</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/menu.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     </head>
     <body>
-		<img src="img/background.png" style="top:0;left:0;width:100%;height:100%"/>
+
+        <img src="img/background.png" style="top:0;left:0;width:100%;height:100%"/>
+
         <div class="menubar">
-            <div class="logo"><span class="glyphicon glyphicon-menu-hamburger"></span>SOC</div>
-            <div class="pesquisa"><input class="input-programa" maxlength="4"/><button class="button-ok"><span class="glyphicon glyphicon-search"></span></button></div>
+
+            <div class="logo">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>SOC
+            </div>
+
+            <div class="botoes">
+                <button class="button-lg"><span class="glyphicon glyphicon-star"></span></button>
+                <button class="button-lg"><span class="glyphicon glyphicon-alert"></span></button>
+                <button class="button-lg"><span class="glyphicon glyphicon-home"></span></button>
+            </div>
+
+            <div class="pesquisa">
+                <input class="input-programa" maxlength="4"/>
+                <button class="button-ok"><span class="glyphicon glyphicon-search"></span></button>
+            </div>
+
             <div class="programa">273 - PPRA</div>
+
         </div>
+
         <div class="menu">
             <input/><button><span class="glyphicon glyphicon-search"></span></button>
-            
-            <div class="menu-group">
+
+            <ul class="menu-group nivel-1">
+
+                <li>
+
+                    <span class="item"><span class="glyphicon glyphicon-book"></span>Administração</span>
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <a href="#" class="item"><span class="glyphicon glyphicon-user"></span>Pessoas</a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <a href="#" class="item"><span class="glyphicon glyphicon-thumbs-up"></span>Solicitação de melhoria</a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-calendar"></span>Agenda</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-calendar"></span>Agenda</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-calendar"></span>Cadastro de agenda</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-calendar"></span>Compromissos</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-calendar"></span>Motivo cancelamento</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-question-sign"></span>Central de ajuda</span>
+                        </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+            <ul class="menu-group nivel-1">
+                <li>
+                    <span class="item"><span class="glyphicon glyphicon-paste"></span>Cadastro</span>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-home"></span>Estrutura</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-home"></span>Empresa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-user"></span>Funcionário</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-home"></span>Unidade</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-home"></span>Setor</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-home"></span>Cargo</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-plus"></span>Saúde</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-alert"></span>Risco/Exames</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-tent"></span>Exame</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-tent"></span>Aplicação de exames</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-scale"></span>Aparelho audiométrico</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-home"></span>Estrutura</span>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-user"></span>Funcionario</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-warning-sign"></span>Segurança</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-alert"></span>Risco</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-sunglasses"></span>EPI</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-sunglasses"></span>EPC</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-flash"></span>Fontes geradoras</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-alert"></span>Grupo de exposição</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            </ul>
+
+            <ul class="menu-group nivel-1">
+
+                <li>
+                    <span class="item"><span class="glyphicon glyphicon-pushpin"></span>Tarefas</span>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-plus"></span>Saúde</span>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-paste"></span>Ficha clínica</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-tent"></span>Pedido de exames</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-paste"></span>Resultado de exames</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-file"></span>ASO rápido</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-copy"></span>Resultado de exames em massa</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-alert"></span>Segurança</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-bed"></span>Acidente</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-sunglasses"></span>Entrega de EPI</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-pencil"></span>Registro de Ocorrencia</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-edit"></span>Atividades</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-edit"></span>Atividades</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-edit"></span>Registro de atividades</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-blackboard"></span>Treinamento</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-blackboard"></span>Curso</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-blackboard"></span>Tipo de curso</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-blackboard"></span>Planejamento de cursos</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-file"></span>Gestão de arquivos do eSocial</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-file"></span>Arquivos do eSocial</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-list-alt"></span>Digitação de prontuários</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-list-alt"></span>Tela de digitação</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+            <ul class="menu-group nivel-1">
+
+                <li>
+                    <span class="item"><span class="glyphicon glyphicon-stats"></span>Relatórios</span>
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item">Legais</span>
+                            <ul class="menu-group nivel-3">
+                                <li><a href="#" class="item"><span class="glyphicon glyphicon-file"></span>PPRA</a></li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li><a href="#" class="item"><span class="glyphicon glyphicon-file"></span>PCMSO</a></li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li><a href="#" class="item"><span class="glyphicon glyphicon-file"></span>LTCAT</a></li>
+                            </ul>
+                            <ul class="menu-group nivel-3">
+                                <li><a href="#" class="item"><span class="glyphicon glyphicon-tasks"></span>Relatório anual</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-folder-open"></span>Gerenciais</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-user"></span>Listagem de funcionario</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-wrench"></span>Operacionais</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-sunglasses"></span>Relatório de entrega de EPI</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-object-align-left"></span>Dados estatísticos</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-copy"></span>Personalização</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu-group nivel-2">
+                        <li>
+                            <span class="item"><span class="glyphicon glyphicon-home"></span>Estrutura</span>
+
+                            <ul class="menu-group nivel-3">
+                                <li>
+                                    <a href="#" class="item"><span class="glyphicon glyphicon-user"></span>Funcionario</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
                 
-                <div class="nivel-1">
-                    <span><span class="glyphicon glyphicon-book"></span>Administração</span>
-                </div>
-                
-                <div class="nivel-2">Pessoas</div>
-            </div>
-            
-            <div class="menu-group">
-                <div class="nivel-1">
-                    <span><span class="glyphicon glyphicon-paste"></span>Cadastro</span>
-                </div>
-                <div class="nivel-2">
-                    <span>Estrutura</span>
-                </div>
-                <div class="nivel-3">
-                    <span>Funcionario</span>
-                </div>
-            </div>
-            
-            <div class="menu-group">
-                
-                <div class="nivel-1">
-                    <span><span class="glyphicon glyphicon-pushpin"></span>Tarefas</span>
-                </div>
-                
-                <div class="nivel-2">Saude</div>
-                
-            </div>
-            
-            <div class="menu-group">
-                
-                <div class="nivel-1">
-                    <span><span class="glyphicon glyphicon-stats"></span>Relatórios</span>
-                </div>
-                
-                <div class="nivel-2">
-                    <span>Legais</span>
-                </div>
-                
-                <div class="nivel-3">PPRA</div>
-                
-            </div>
-            
-            <div class="menu-group">
-                
-                <div class="nivel-1">
-                    <span><span class="glyphicon glyphicon-off"></span>Sair</span>
-                </div>
-                
-            </div>
-            
+
+            <ul class="menu-group nivel-1">
+
+                <li>
+                    <a href="#" class="item"><span class="glyphicon glyphicon-off"></span>Sair</span>
+                </li>
+
+            </ul>
+
         </div>
         <div class="overlay"></div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </html>

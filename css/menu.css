@@ -1,40 +1,68 @@
 .menubar{
-    height:70px;
+    height:50px;
     width:100%;
     position: fixed;
     top: 0;
     left: 0;
-    font-family: Helvetica,Arial,sans-serif;
     background-color: #019683;
-    line-height: 70px;
+    line-height: 50px;
     z-index: 99;
 }
 
 .menubar > .logo, .programa{
     position: relative;
     float:left;
-    font-size: 24pt;
+    font-size: 18pt;
     color: #FFF;
     padding: 0 20px;
     transition: all 0.4s ease;
 }
 
-.logo > .glyphicon{
-    font-size: 20pt;
+.menubar > .logo > .glyphicon{
+    font-size: 16pt;
     margin-right: 10px;
 }
 
 .menubar > .logo:hover{
+    background-color: #F08741;
+}
+
+.menubar > .logo:hover > .glyphicon{
+    transition: all 1s ease;
+    transform: rotate(270deg);
+}
+
+.botoes{
+    float: left;
+    margin-left: 70px;
+    overflow: auto;
+    zoom:1;
+}
+
+.botoes > .button-lg{
+    height:100%;
+    font-size: 1.5em;
+    width: 50px;
     background-color: #017D6D;
+    color: #fff;
+    border: none;
+    float:left;
+    transition: all 0.4s ease;
+}
+
+.botoes > .button-lg:hover{
+    height:100%;
+    color: #fff;
+    background-color: #F08741;
 }
 
 .menubar > .pesquisa{
     position: relative;
     float: left;
-    height:50%;
-    line-height: 20px;
+    height:60%;
+    line-height: 15px;
     margin-left: 50px;
-    margin-top: 18px;
+    margin-top: 10px;
     transition: all 0.4s ease;
     visibility: hidden;
     opacity:0;
@@ -43,7 +71,7 @@
 .pesquisa > input,.pesquisa > button{
     float:left;
     height:100%;
-    width: 4em;
+    width: 5em;
     box-sizing: border-box;
     border: none;
     color: #FFF;
@@ -51,16 +79,17 @@
 
 .pesquisa > input{
     background-color: #017D6D;
-    font-size: 18pt;
-    padding:10px;
+    font-size: 12pt;
+    padding:10px 20px;
 }
 
 .pesquisa > input:hover{
     border: 1px solid #269DF0;
 }
 
-.pesquisa > button{
-    font-size: 16pt;
+.pesquisa > .button-ok{
+    width: 2em;
+    font-size: 12pt;
     background-color: #56A89F;
     transition: all 0.4s ease;
 }
@@ -78,39 +107,40 @@
     opacity:0;
 }
 
+/*******************MENU****************/
 .menu{
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 100%;
     height:100%;
-    margin-top:70px;
+    margin-top:50px;
     background-color: #E6E6E6;
     overflow: auto;
     z-index: 98;
 }
 
 .menu > input,.menu > button{
-    height:55px;
+    height:40px;
     box-sizing: border-box;
     border: none;
 }
 
 .menu > input{
-    width: 75%;
+    width: 85%;
     background-color: #FFF;
     color: #000;
     padding:10px;
-    font-size: 18pt;
+    font-size: 12pt;
     transition: all 0.4s ease;
 }
 
 .menu > button{
-    width: 25%;
+    width: 15%;
     float:right;
     background-color: #888;
     color: #FFF;
-    font-size: 18pt;
+    font-size: 12pt;
     transition: all 0.4s ease;
 }
 
@@ -123,86 +153,56 @@
     color:#666;
 }
 
-.menu-group > .nivel-1,
-.menu-group > .nivel-2,
-.menu-group > .nivel-3{
-    line-height: 40px;
+.menu-group {
+    list-style-type: none;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s ease;
+}
+
+.menu-group > li > span.item:after{
+    font-family: 'Glyphicons Halflings';
+    content:"\e080";
+    font-size: 12pt;
+    position: absolute;
+    transform: rotate(90deg);
+    right: 1em;
+}
+
+.menu-group li{
+    line-height: 60px;
+    display: block;
     color: #666;
     font-size: 16pt;
     transition: all 0.4s ease;
 }
-.menu-group > .nivel-1{
-    padding: 10px 15px;
-}
 
-.menu-group > .nivel-1::after,
-.menu-group > .nivel-2::after,
-.menu-group > .nivel-3::after{
-    content:'';
-    height:1px;
-    width: 85%;
-    position: absolute;
-    display: block;
-    background-color: #666;
-    border-bottom:2px solid #666;
-}
-
-.menu-group:hover > .nivel-1::after,
-.menu-group:hover > .nivel-2::after,
-.menu-group:hover > .nivel-3::after{
-    background-color: #FFF;
-    border-bottom:2px solid #FFF;
-}
-
-.menu-group:hover > .nivel-1,
-.menu-group:hover > .nivel-2,
-.menu-group:hover > .nivel-3{
-    background-color: #666;
-    color: #FFF;
-    padding-left: 30px;
-    transition: all 0.4s ease;
-}
-
-.menu-group:hover .nivel-1 + .nivel-2{
-    height:50px;
-    width: 100%;
-    color: #666;
-    background-color: #E6E6E6;
-    padding: 10px 15px;
-    padding-left: 40px;
+.menu-group li:hover > .menu-group > li > .item{
+    height:60px;
     visibility: visible;
     opacity: 1;
 }
 
-.menu-group:hover .nivel-2:hover{
+.menu-group > li > .item:hover{
     color: #FFF;
-    background-color: #666;
+    background-color: #019683;
 }
 
-.menu-group:hover .nivel-2:hover + .nivel-3{
-    height:50px;
-    width: 100%;
-    color: #666;
-    background-color: #E6E6E6;
-    padding: 10px 15px;
-    padding-left: 50px;
-    visibility: visible;
-    opacity: 1;
-}
-
-.menu-group > .nivel-1 .glyphicon,
-.menu-group > .nivel-2 .glyphicon,
-.menu-group > .nivel-3 .glyphicon{
+.menu-group > li .glyphicon{
     margin-right: 10px;
 }
 
-.nivel-2,.nivel-3{
-    visibility: hidden;
-    opacity: 0;
-    height:0;
-    width: 0;
-    margin: 0;
-    padding:0;
+.nivel-2 > li > .item{
+    padding-left: 30px;
+    background-color:#888;
+    color:#EEE;
+}
+
+.nivel-3 > li > .item{
+    padding-left: 45px;
+    color:#EEE;
+    background-color:#666;
 }
 
 .overlay{
@@ -216,12 +216,42 @@
     z-index: 97;
 }
 
+.menu .item{
+    display: block;
+    width:100%;
+    line-height: 60px;
+    padding: 0 15px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.menu .item:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nivel-2 .item, .nivel-3 .item{
+    visibility: hidden;
+    height:0;
+    opacity: 0;
+    margin: 0;
+    padding:0;
+}
+
 @media only screen and (min-width: 580px) {
     .menubar > .pesquisa{
         visibility: visible;
         opacity:1;
     }
     
+    .menu{
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
     .menubar > .programa{
         visibility: visible;
         opacity:1;
