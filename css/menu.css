@@ -114,7 +114,7 @@
     left: 0;
     width: 100%;
     height:100%;
-    margin-top:50px;
+    padding-top:50px;
     background-color: #E6E6E6;
     overflow: auto;
     z-index: 98;
@@ -167,7 +167,7 @@
     font-size: 12pt;
     position: absolute;
     transform: rotate(90deg);
-    right: 1em;
+    right: 1.5em;
 }
 
 .menu-group li{
