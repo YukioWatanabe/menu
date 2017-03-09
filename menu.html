@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>SOC - Main</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -375,12 +376,100 @@
 
         </div>
         
-        <div class="container-fluid" style="padding:70px;">
+        <form class="container-fluid material-form" style="padding-top:70px;">
             <fieldset>
                 <legend>Dados Pessoais</legend>
-                <label for="nome">Nome do funcionário</label>
-                <div class="exemplo"><input id="nome" type="text" placeholder="Digite seu nome"/></div>
+                
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" placeholder="Digite seu nome" class="col-md-10 col-xs-12"/>
+                    </div>
+                    
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input id="sobrenome" type="text" placeholder="Digite seu sobrenome" class="col-md-10 col-xs-12"/>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text" placeholder="Digite seu CPF" class="col-md-10 col-xs-12"/>
+                    </div>
+                    
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="cnpj">CNPJ</label>
+                        <input id="cnpj" type="text" placeholder="Digite seu CNPJ" class="col-md-10 col-xs-12"/>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="data-nascimento">Data de nascimento</label>
+                        <input id="data-nascimento" type="text" placeholder="Digite sua data de nascimento" class="col-md-10 col-xs-12"/>
+                    </div>
+                    
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="data-admissao">Data de admissão</label>
+                        <input id="data-admissao" type="text" placeholder="Digite sua data de admissão" class="col-md-10 col-xs-12"/>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-xs-12 col-md-4">
+                        <label for="unidade">Unidade</label>
+                        <select id="unidade" class="col-md-10 col-xs-12">
+                            <option value="516">Selecione uma opção</option>
+                            <option value="516">Itajaí</option>
+                            <option value="516">Ubatuba</option>
+                            <option value="516">Sorocaba</option>
+                            <option value="516">Santos</option>
+                            <option value="516">Paranapiacaba</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group col-xs-12 col-md-4">
+                        <label for="setor">Setor</label>
+                        <select id="setor" class="col-md-10 col-xs-12">
+                            <option value="516">Selecione uma opção</option>
+                            <option value="516">Administrativo</option>
+                            <option value="516">Desenvolvimento</option>
+                            <option value="516">Limpeza</option>
+                            <option value="521">Contabilidade</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group col-xs-12 col-md-4">
+                        <label for="cargo">Cargo</label>
+                        <select id="cargo" class="col-md-10 col-xs-12">
+                            <option value="516">Selecione uma opção</option>
+                            <option value="521">Diretor</option>
+                            <option value="521">Analista de Sistemas</option>
+                            <option value="521">Faxineiro</option>
+                            <option value="521">Analista de Negócios</option>
+                            <option value="521">Advogado</option>
+                            <option value="521">Motorista</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row button-row">
+                    <div class="col-xs-12">
+                        <button class="bt-large green" style="margin-right:20px;"><i class="glyphicon glyphicon-check"></i>Salvar</button>
+                        <button class="bt-large red"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                    </div>
+                </div>
             </fieldset>
+        </form>
+        <div class="window window-lg">
+            <div class="window-bar">
+                <span class="window-title">Janela</span>
+                <div class="window-button window-close"></div>
+                <div class="window-button window-restore"></div>
+                <div class="window-button window-minimize"></div>
+            </div>
+            <div class="window-content"></div>
         </div>
         <div class="overlay"></div>
     </body>

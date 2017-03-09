@@ -1,5 +1,6 @@
 body{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10pt;
 }
 
 .menubar{
@@ -16,14 +17,16 @@ body{
 .menubar > .logo, .programa{
     position: relative;
     float:left;
-    font-size: 18pt;
+    font-size: 1.5em;
     color: #FFF;
     padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
     transition: background 0.4s ease;
 }
 
 .menubar > .logo > .glyphicon{
-    font-size: 16pt;
+    font-size: 0.8em;
     margin-right: 10px;
     transition: transform 1s ease;
 }
@@ -38,14 +41,14 @@ body{
 
 .botoes{
     float: left;
-    margin-left: 70px;
+    margin-left: 30px;
     overflow: auto;
     zoom:1;
 }
 
 .botoes > .button-lg{
     height:100%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 50px;
     background-color: #017D6D;
     color: #fff;
@@ -81,7 +84,7 @@ body{
 
 .pesquisa > input{
     background-color: #017D6D;
-    font-size: 12pt;
+    font-size: 1em;
     padding:10px 20px;
 }
 
@@ -91,7 +94,7 @@ body{
 
 .pesquisa > .button-ok{
     width: 2em;
-    font-size: 12pt;
+    font-size: 1em;
     background-color: #56A89F;
     transition: background 0.4s ease;
 }
@@ -103,7 +106,7 @@ body{
 .menubar > .programa{
     position:absolute;
     right:0;
-    font-size: 16pt;
+    font-size: 1.3em;
     transition: opacity 0.4s ease;
     visibility: hidden;
     opacity:0;
@@ -116,12 +119,13 @@ body{
     left: 0;
     width: 100%;
     height:100%;
+    font-size: 1.3em;
     padding-top:50px;
     margin-left:-100%;    
     background-color: #E6E6E6;
     overflow: auto;
     z-index: 98;
-    transition:margin-left 0.4s ease-out;
+    transition: margin-left 0.4s ease-out;
 }
 
 .menu.active{
@@ -175,13 +179,21 @@ body{
     padding: 0 15px;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: background 0.4s ease,height 0.4s ease,opacity 0.4s ease,visibility 0.4s ease;
 }
 
 .menu .item:hover{
     text-decoration: none;
     color: inherit;
+}
+
+.menu-group li{
+    line-height: 60px;
+    display: block;
+    color: #666;
+    transition: height 0.4s ease;
 }
 
 .menu-group > li > span.item:after{
@@ -191,14 +203,6 @@ body{
     position: absolute;
     transform: rotate(90deg);
     right: 1.5em;
-}
-
-.menu-group li{
-    line-height: 60px;
-    display: block;
-    color: #666;
-    font-size: 16pt;
-    transition: height 0.4s ease;
 }
 
 .menu-group li.active > .menu-group > li > .item{
@@ -254,29 +258,181 @@ body{
     padding:0;
 }
 
-legend{
-    font-size: 18pt;
+/********** FORM ***********/
+
+form.material-form legend{
+    color: #333;
+    font-size: 1.5em;
 }
 
-label{
+form.material-form label{
+    display: block;
+    color: #333;
     font-weight: 400;
-    font-size: 16pt;
+    font-size: 1.3em;
     clear: both;
 }
 
-fieldset input{
-    width: 500px;
+form.material-form  input, form.material-form  select{
     padding:10px;
     font-size: 14pt;
     border: none;
     border-bottom: 1px solid #CCC;
     display: block;
+    transition: width 0.4s ease-out;
 }
 
-input:focus{
+form.material-form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+}
+
+form.material-form select::after{
+    content: 'V';
+}
+
+form.material-form input:focus , form.material-form select:focus{
+    width: 100%;
     border: none;
     border-bottom: 2px solid #019683;
     outline: none;
+}
+
+form.material-form select option{
+    line-height: 2em;
+}
+
+form.material-form select::-ms-expand { 
+    display: none; /* hide the default arrow in ie10 and ie11 */
+}
+
+form.material-form .button-row{
+    margin-top:40px;
+}
+
+form.material-form button .glyphicon{
+    margin-right: 10px;
+}
+
+form.material-form button{
+    color: #FFF;
+    border: none;
+    font-weight: 550;
+    border-radius: 5px;
+    transition: background 0.4s ease;
+}
+
+form.material-form button.bt-small{
+    padding:0.5em 7em;
+    font-size: 1em;
+}
+
+form.material-form button.bt-medium{
+    padding:1em 1.2em;
+    font-size: 1.1em;
+}
+
+form.material-form button.bt-large{
+    padding:1.2em 1.4em;
+    font-size: 1.2em;
+}
+
+form.material-form button.green{
+    background-color: #09A35C;
+}
+
+form.material-form button.green:hover{
+    background-color: #077F48;
+}
+
+form.material-form button.red{
+    background-color: #DB0000;
+}
+
+form.material-form button.red:hover{
+    background-color: #A10000;
+}
+
+.window{
+    position: fixed;
+    color: #FFF;
+    top:50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -350px;
+    background-color: #FFF;
+    border-radius: 5px;
+    transition: all 0.4s ease-out;
+}
+
+.window.window-lg{
+    width:700px;
+    height: 400px;
+}
+
+.window > .window-bar{
+    width: 100%;
+    height:50px;
+    font-size: 1.2em;
+    background-color: #019683;
+}
+
+.window > .window-bar > .window-title{
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+.window > .window-bar > .window-button{
+    position: relative;
+    height:80%;
+    width:2.5em;
+    float: right;
+    color: #FFF;
+    line-height: 40px;
+    background-color: #38a58a;
+    cursor: pointer;
+    transition:background-color 0.4s ease;
+}
+
+.window > .window-bar > .window-button:hover{
+    background-color: #017D6D;
+}
+
+.window > .window-bar > .window-button.window-close{
+    background-color: #DB0000;
+}
+
+.window > .window-bar > .window-button.window-close:hover{
+    background-color: #A10000;
+}
+
+.window > .window-bar > .window-button::after{
+    text-align: center;
+    display: block;
+    font-size: 0.7em;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.window > .window-bar > .window-button.window-minimize::after{
+    content: "\2212";
+}
+
+.window > .window-bar > .window-button.window-restore::after{
+    content: "\e096";
+}
+
+.window > .window-bar > .window-button.window-close::after{
+    content: "\e014";
+}
+
+.window > .window-content{
+    width: 100%;
+    height: 100%;
+    border: 5px solid #019683;
 }
 
 @media only screen and (min-width: 580px) {
@@ -292,8 +448,14 @@ input:focus{
 }
 
 @media only screen and (min-width: 640px) {
+    body{
+        font-size: 12pt;
+    }
     .menubar > .programa{
         visibility: visible;
         opacity:1;
+    }
+    form.material-form{
+        padding:70px 50px;
     }
 }
