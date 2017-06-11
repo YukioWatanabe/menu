@@ -376,6 +376,7 @@ form.material-form button.red:hover{
     width: 100%;
     height:50px;
     font-size: 1.2em;
+    position: absolute;
     background-color: #019683;
 }
 
@@ -429,10 +430,19 @@ form.material-form button.red:hover{
     content: "\e014";
 }
 
+.window.close-window{
+    width: 0;
+    height:0;
+    opacity:0;
+    visibility: hidden;
+}
+
 .window > .window-content{
     width: 100%;
     height: 100%;
+    padding-top: 50px;
     border: 5px solid #019683;
+    background-color: #FFF;
 }
 
 @media only screen and (min-width: 580px) {

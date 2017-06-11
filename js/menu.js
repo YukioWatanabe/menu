@@ -22,6 +22,11 @@ $('.menu').on('click','.menu-group > li > span', function(){
     $(this).parents('li').eq(0).toggleClass('active',add);
 });
 
+$('.window').on('click','.window-close',function(){
+    var target = $(this).parents('.window');
+    target.addClass('close-window');
+});
+
 $('[name=pesquisa-menu]').keyup(pesquisaMenu);
 
 $('.logo').click(displayMenu);
